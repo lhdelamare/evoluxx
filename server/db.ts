@@ -32,10 +32,16 @@ export let pool: mysql.Pool;
 export async function initDatabase() {
   const baseConfig = getBaseConnectionConfig();
 
-  // 1. Create database if not exists
-  const tempConn = await mysql.createConnection(baseConfig);
-  await tempConn.query(`CREATE DATABASE IF NOT EXISTS \`${DB_NAME}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`);
-  await tempConn.end();
+  // 1. Try to create database if not exists (safe if user is root; if Coolify already created DB for a restricted user, continues safely)
+  try {
+    const tempConn = await mysql.createConnection(baseConfig);
+    await tempConn.query(
+      `CREATE DATABASE IF NOT EXISTS \`${DB_NAME}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`
+    );
+    await tempConn.end();
+  } catch (err: any) {
+    console.warn(`ℹ️ Aviso ao verificar criação do banco (${DB_NAME}): ${err.message}. Conectando diretamente ao banco...`);
+  }
 
   // 2. Initialize pool with database
   pool = mysql.createPool({
