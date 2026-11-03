@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <title>Evoluxx AutoGest B2B — Gestão de Vendas, Clientes & Frota</title>
+    <link rel="icon" type="image/png" href="/LogoTransparente.png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#004c6e",
+              "tertiary-fixed": "#cbe6ff",
+              "on-surface-variant": "#5c403c",
+              "outline-variant": "#e6bdb8",
+              "on-error": "#ffffff",
+              "surface-variant": "#dae2fd",
+              primary: "#b70011",
+              "on-tertiary-fixed": "#001e30",
+              "on-primary-container": "#fff6f5",
+              "surface-tint": "#bf0715",
+              "on-tertiary-fixed-variant": "#004b71",
+              "on-surface": "#131b2e",
+              "on-background": "#131b2e",
+              "error-container": "#ffdad6",
+              outline: "#916f6b",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#004666",
+              "primary-container": "#dc2626",
+              "on-primary-fixed": "#410002",
+              "primary-fixed": "#ffdad6",
+              "surface-container-highest": "#dae2fd",
+              "inverse-on-surface": "#eef0ff",
+              "tertiary-fixed-dim": "#90cdff",
+              "on-secondary": "#ffffff",
+              "inverse-surface": "#283044",
+              "surface-container-low": "#f2f3ff",
+              "on-tertiary-container": "#f3f8ff",
+              "primary-fixed-dim": "#ffb4ab",
+              "secondary-fixed": "#c9e6ff",
+              "on-secondary-fixed": "#001e2f",
+              "secondary-container": "#39b8fd",
+              "on-primary-fixed-variant": "#93000b",
+              "on-tertiary": "#ffffff",
+              background: "#faf8ff",
+              tertiary: "#005e8d",
+              "on-error-container": "#93000a",
+              "surface-container": "#eaedff",
+              "secondary-fixed-dim": "#89ceff",
+              "tertiary-container": "#0078b2",
+              "surface-container-high": "#e2e7ff",
+              error: "#ba1a1a",
+              "inverse-primary": "#ffb4ab",
+              "surface-dim": "#d2d9f4",
+              "surface-bright": "#faf8ff",
+              secondary: "#006591",
+              "surface-container-lowest": "#ffffff",
+              surface: "#faf8ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "gutter-desktop": "1.5rem",
+              "space-lg": "1rem",
+              gutter: "1rem",
+              "margin-desktop": "2rem",
+              "space-2xl": "2rem",
+              "space-md": "0.75rem",
+              "space-xl": "1.5rem",
+              "space-xs": "0.25rem",
+              margin: "1rem",
+              "space-sm": "0.5rem",
+            },
+            fontFamily: {
+              "headline-md": ["Inter", "sans-serif"],
+              "headline-sm": ["Inter", "sans-serif"],
+              "headline-lg": ["Inter", "sans-serif"],
+              "label-lg": ["Inter", "sans-serif"],
+              "data-currency": ["Inter", "sans-serif"],
+              "body-md": ["Inter", "sans-serif"],
+              "label-md": ["Inter", "sans-serif"],
+              "body-lg": ["Inter", "sans-serif"],
+              "label-sm": ["Inter", "sans-serif"],
+              "body-sm": ["Inter", "sans-serif"],
+              "display-lg": ["Inter", "sans-serif"],
+            },
+            fontSize: {
+              "headline-md": [
+                "20px",
+                { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" },
+              ],
+              "headline-sm": [
+                "16px",
+                { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600" },
+              ],
+              "headline-lg": [
+                "24px",
+                { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" },
+              ],
+              "label-lg": [
+                "14px",
+                { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" },
+              ],
+              "data-currency": [
+                "22px",
+                { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "700" },
+              ],
+              "body-md": [
+                "14px",
+                { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "label-md": [
+                "12px",
+                { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" },
+              ],
+              "body-lg": [
+                "16px",
+                { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "label-sm": [
+                "11px",
+                { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" },
+              ],
+              "body-sm": [
+                "12px",
+                { lineHeight: "16px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "display-lg": [
+                "32px",
+                { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer base {
+        html,
+        body {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+          -webkit-tap-highlight-color: transparent;
+          min-height: 100dvh;
+        }
+        .pb-safe {
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .pt-safe {
+          padding-top: env(safe-area-inset-top, 0px);
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d2d9f4;
+        border-radius: 9999px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .material-symbols-outlined {
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-primary-container selection:text-on-primary"
+  >
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
