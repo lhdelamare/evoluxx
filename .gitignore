@@ -4,3 +4,4 @@ dist
 .env
 npm-debug.log*
 vite.config.ts.timestamp-*
+fallback-store.json
